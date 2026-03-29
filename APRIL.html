@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Important Update...</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:black;
+color:white;
+overflow:hidden;
+}
+
+/* Loading */
+#loading{
+position:fixed;
+width:100%;
+height:100%;
+background:#0f0f0f;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.loader{
+border:5px solid #222;
+border-top:5px solid #00ffcc;
+border-radius:50%;
+width:60px;
+height:60px;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+/* Main */
+#main{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff416c,#ff4b2b);
+text-align:center;
+}
+
+/* Card */
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:20px;
+animation:pop 0.6s ease;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+@keyframes pop{
+from{transform:scale(0.5);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h1{font-size:3em;}
+p{margin-top:10px;font-size:1.2em;}
+
+img{
+width:260px;
+margin-top:20px;
+border-radius:15px;
+}
+
+/* Button */
+button{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff416c;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:black;
+color:white;
+}
+
+/* Glitch */
+.glitch{
+animation:glitch 1s infinite;
+}
+
+@keyframes glitch{
+0%{text-shadow:2px 2px red;}
+25%{text-shadow:-2px -2px cyan;}
+50%{text-shadow:2px -2px lime;}
+75%{text-shadow:-2px 2px yellow;}
+100%{text-shadow:2px 2px red;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="loading">
+<div class="loader"></div>
+<p style="margin-top:15px;">Loading important data Click For Fast Loading...</p>
+</div>
+
+<div id="main">
+<div class="card">
+<h1 class="glitch">CHUD GAYE GURU APRIL FOOL HO GIYA 🤡</h1>
+<p>Arey Abhijit... tu toh fas gaya 😂🔥</p>
+<p>Gand pe ek Raipta Marunga Sadak pe hagta Firega 😊</p>
+
+<img src="https://api.fstik.app/file/CAACAgUAAxUAAWm7T1ri5votTDGp11-mk7IeAs2GAALYFAACF2-wVhiw4ExNC7oQOgQ/sticker.webp"><br>
+
+<button onclick="troll()">Click mat karna 😏</button>
+</div>
+</div>
+
+<!-- AUDIO -->
+<audio id="sound" loop>
+  <source src="https://raw.githubusercontent.com/yogiadityanathup/cidspoof/cbd02b173f8be62dd955459fa462c69aab64334b/WhatsApp%20Audio%202026-03-29%20at%2023.40.00.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const audio = document.getElementById("sound");
+
+// Force autoplay function
+function playAudio(){
+  audio.play().catch(()=>{});
+}
+
+// Multiple triggers (hack)
+window.onload = playAudio;
+document.addEventListener("DOMContentLoaded", playAudio);
+document.addEventListener("mousemove", playAudio, { once:true });
+document.addEventListener("click", playAudio, { once:true });
+document.addEventListener("touchstart", playAudio, { once:true });
+
+// Page load animation
+setTimeout(()=>{
+  document.getElementById("loading").style.display="none";
+  document.getElementById("main").style.display="flex";
+  playAudio(); // try again after loading
+},2500);
+
+function troll(){
+alert("Abhijit Lode raha Nhi gaya 🙂😊");
+}
+</script>
+
+</body>
+</html>
